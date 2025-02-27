@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class = "profile_container">
+    <img class = "p-img" src = "{{ user.profile_image }}">
+    <h1>{{ user.Name }}</h1>
+    <h3>{{ user.Username }}</h3>
+    <p><strong>{{ user.Location }}</strong></p>
+    <p><strong>{{ user.Date_joined }}</strong></p>
+    <p>{{ user.Bio }}</p>
+
+    <div class = "user-data">
+        <div>
+            <strong>{{ user.Posts }}</strong>
+            <p>Posts</p>
+        </div>
+        <div>
+            <strong>{{ user.Following }}</strong>
+            <p>Following</p>
+        </div>
+        <div>
+            <strong>{{ user.Followers }}</strong>
+            <p>Followers</p>
+        </div>
+    </div>
+    <button class="flw-btn">Follow</button>
+</div>
+{% endblock %}
